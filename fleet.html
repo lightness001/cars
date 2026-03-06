@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lightness | Our Elite Fleet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .serif { font-family: 'Playfair Display', serif; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased">
+
+    <nav class="fixed w-full z-50 glass px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font-bold tracking-tighter serif italic"><a href="index.html">LIGHTNESS</a></div>
+        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest text-slate-400 font-medium">
+            <a href="fleet.html" class="text-white border-b border-white">Fleet</a>
+            <a href="security.html" class="hover:text-white transition">Security</a>
+            <a href="booking.html" class="hover:text-white transition">Booking</a>
+        </div>
+        <a href="booking.html" class="bg-white text-black px-6 py-2 text-xs font-bold uppercase tracking-widest hover:bg-slate-200 transition">
+            Book Now
+        </a>
+    </nav>
+
+    <header class="pt-32 pb-16 text-center px-4">
+        <h1 class="text-5xl md:text-7xl serif italic mb-6">The Power Behind <br> The Precision.</h1>
+        <p class="max-w-2xl mx-auto text-slate-400 text-lg">Our fleet consists of custom-engineered carriers designed for zero-clearance loading and climate-controlled transit.</p>
+    </header>
+
+    <section class="max-w-7xl mx-auto px-6 py-12">
+        <div class="space-y-24">
+            
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="flex-1">
+                    <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&q=80" class="rounded-3xl grayscale hover:grayscale-0 transition duration-700 shadow-2xl" alt="Enclosed Transport Truck">
+                </div>
+                <div class="flex-1 space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-slate-500">Unit Type 01</span>
+                    <h2 class="text-4xl serif italic">The Stealth Series</h2>
+                    <p class="text-slate-400 leading-relaxed">Fully enclosed, hard-shell trailers with hydraulic lift gates. Perfect for supercars with low ground clearance. No ramps, no risk.</p>
+                    <ul class="text-sm space-y-3 text-slate-300">
+                        <li>• Climate Controlled Environment</li>
+                        <li>• 360° Internal Camera Monitoring</li>
+                        <li>• Air-Ride Suspension for Smooth Transit</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row-reverse gap-12 items-center">
+                <div class="flex-1">
+                    <img src="https://images.unsplash.com/photo-1586191121278-200df1d4d659?auto=format&fit=crop&q=80" class="rounded-3xl grayscale hover:grayscale-0 transition duration-700 shadow-2xl" alt="Open Car Carrier">
+                </div>
+                <div class="flex-1 space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-slate-500">Unit Type 02</span>
+                    <h2 class="text-4xl serif italic">The Logistics Pro</h2>
+                    <p class="text-slate-400 leading-relaxed">Efficient, open-air transport for daily luxury vehicles and SUVs. High-capacity delivery without compromising on safety protocols.</p>
+                    <ul class="text-sm space-y-3 text-slate-300">
+                        <li>• Multi-Vehicle Capacity</li>
+                        <li>• Rapid Nationwide Deployment</li>
+                        <li>• GPS Satellite Tracking Enabled</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-24 bg-slate-900/50 mt-12">
+        <div class="max-w-4xl mx-auto px-6">
+            <h3 class="text-2xl serif italic mb-8 text-center">Equipment Standards</h3>
+            <table class="w-full text-left border-collapse">
+                <tr class="border-b border-white/10 text-slate-500 text-xs uppercase tracking-widest">
+                    <th class="py-4">Feature</th>
+                    <th class="py-4">Enclosed</th>
+                    <th class="py-4">Open</th>
+                </tr>
+                <tr class="border-b border-white/5">
+                    <td class="py-4 font-semibold">Loading Method</td>
+                    <td class="py-4 text-slate-400">Hydraulic Lift</td>
+                    <td class="py-4 text-slate-400">Soft-Ramp</td>
+                </tr>
+                <tr class="border-b border-white/5">
+                    <td class="py-4 font-semibold">Insurance Coverage</td>
+                    <td class="py-4 text-slate-400">Up to $5M</td>
+                    <td class="py-4 text-slate-400">Up to $1M</td>
+                </tr>
+                <tr>
+                    <td class="py-4 font-semibold">Weather Protection</td>
+                    <td class="py-4 text-slate-400">100% Shielded</td>
+                    <td class="py-4 text-slate-400">Exposed</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-slate-900 text-center text-slate-600 text-sm">
+        <p>&copy; 2026 Lightness Car Delivery. <a href="index.html" class="underline">Back to Home</a></p>
+    </footer>
+
+</body>
+</html>
