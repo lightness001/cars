@@ -10,12 +10,14 @@
         body { font-family: 'Inter', sans-serif; }
         .serif { font-family: 'Playfair Display', serif; }
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        @keyframes pulse-slow { 0%, 100% { transform: scale(1.1); } 50% { transform: scale(1.15); } }
+        .animate-bg { animation: pulse-slow 15s infinite ease-in-out; }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 antialiased">
 
     <nav class="fixed w-full z-50 glass px-6 py-4 flex justify-between items-center">
-        <div class="text-2xl font-bold tracking-tighter serif italic">LIGHTNESS</div>
+        <div class="text-2xl font-bold tracking-tighter serif italic text-white">LIGHTNESS</div>
         <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest text-slate-400 font-medium">
             <a href="#" class="hover:text-white transition">Fleet</a>
             <a href="#" class="hover:text-white transition">Security</a>
@@ -27,20 +29,21 @@
     </nav>
 
     <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 z-0 bg-[url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-40 scale-110 animate-[pulse_10s_infinite]"></div>
+        <div class="absolute inset-0 z-0 bg-[url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-40 animate-bg"></div>
         <div class="absolute inset-0 bg-gradient-to-b from-slate-950 via-transparent to-slate-950"></div>
 
         <div class="relative z-10 text-center px-4">
             <h1 class="text-5xl md:text-8xl serif italic mb-6 leading-tight">
-                White-Glove <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-slate-500">Auto Logistics.</span>
+                <span id="welcome-text">White-Glove</span> <br> 
+                <span id="car-text" class="text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-slate-500">Auto Logistics.</span>
             </h1>
-            <p class="max-w-xl mx-auto text-slate-400 text-lg mb-10 font-light tracking-wide">
+            <p id="sub-text" class="max-w-xl mx-auto text-slate-400 text-lg mb-10 font-light tracking-wide">
                 Experience the lightness of professional car delivery. From supercars to vintage classics, we handle every mile with surgical precision.
             </p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <button class="bg-white text-black px-10 py-4 rounded-full font-bold hover:scale-105 transition duration-300">
+                <a id="whatsapp-btn" href="https://wa.me/YOUR_NUMBER" class="bg-white text-black px-10 py-4 rounded-full font-bold hover:scale-105 transition duration-300 inline-block text-center">
                     Get a Quote
-                </button>
+                </a>
                 <button class="border border-slate-700 px-10 py-4 rounded-full font-bold hover:bg-slate-900 transition duration-300">
                     View Fleet
                 </button>
@@ -80,5 +83,27 @@
         <p>&copy; 2026 Lightness Car Delivery. All rights reserved.</p>
     </footer>
 
+    <script>
+        // 1. Check the URL for parameters like ?name=John&car=Tesla
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('name');
+        const car = params.get('car');
+
+        // 2. If name or car exists in the link, update the page text
+        if (name) {
+            document.getElementById('welcome-text').innerText = `Welcome, ${name}`;
+        }
+        
+        if (car) {
+            document.getElementById('car-text').innerText = `${car} Delivery.`;
+            document.getElementById('sub-text').innerText = `Your ${car} deserves elite transport. We are ready to move when you are.`;
+            
+            // 3. Update the WhatsApp button with a custom message
+            const waBtn = document.getElementById('whatsapp-btn');
+            const customMessage = encodeURIComponent(`Hello Lightness! I am ${name || 'interested'} and I want a quote for delivering my ${car}.`);
+            waBtn.href = `https://wa.me/255000000000?text=${customMessage}`; // Replace with your real number
+            waBtn.innerText = `Quote for ${car}`;
+        }
+    </script>
 </body>
 </html>
