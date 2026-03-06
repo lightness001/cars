@@ -9,8 +9,9 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         .serif { font-family: 'Playfair Display', serif; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .shield-glow { box-shadow: 0 0 50px rgba(255, 255, 255, 0.05); }
+        .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .shield-glow { box-shadow: 0 0 80px rgba(255, 255, 255, 0.05); }
+        .security-line { height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 antialiased">
@@ -27,71 +28,85 @@
         </a>
     </nav>
 
-    <section class="pt-32 pb-20 px-6 text-center bg-gradient-to-b from-slate-900 to-slate-950">
-        <div class="inline-block p-3 rounded-full bg-white/5 mb-6 border border-white/10">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    <section class="pt-40 pb-20 px-6 text-center relative overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-slate-900/50 via-transparent to-transparent -z-10"></div>
+        
+        <div class="inline-block p-4 rounded-full bg-white/5 mb-8 border border-white/10 animate-pulse">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
-        <h1 class="text-5xl md:text-7xl serif italic mb-6">Fortress on Wheels.</h1>
-        <p class="max-w-2xl mx-auto text-slate-400 text-lg leading-relaxed">
-            We don't just move cars; we guard assets. Our security framework combines military-grade tracking with comprehensive insurance coverage.
+        <h1 class="text-5xl md:text-8xl serif italic mb-8">Fortress on Wheels.</h1>
+        <p class="max-w-2xl mx-auto text-slate-400 text-lg font-light leading-relaxed">
+            We don't just move cars; we guard assets. Our security framework combines military-grade tracking with an ironclad insurance umbrella.
         </p>
     </section>
 
-    <section class="max-w-7xl mx-auto px-6 py-20">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+    <div class="security-line max-w-5xl mx-auto"></div>
+
+    <section class="max-w-7xl mx-auto px-6 py-32">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
             
-            <div class="space-y-12">
-                <div>
-                    <h3 class="text-2xl font-semibold mb-4 serif italic underline decoration-slate-700 underline-offset-8">01. $10M Asset Protection</h3>
-                    <p class="text-slate-400">Every transport is backed by a primary cargo insurance policy. From the moment we sign the Bill of Lading to the final delivery, your vehicle is covered for its full market value.</p>
+            <div class="space-y-16">
+                <div class="group">
+                    <span class="text-xs font-mono text-slate-600 mb-2 block tracking-widest">PROTOCOL 01</span>
+                    <h3 class="text-3xl font-semibold mb-4 serif italic group-hover:text-white transition-colors">Comprehensive Asset Protection</h3>
+                    <p class="text-slate-400 leading-relaxed">Every transport is backed by a $10M primary cargo insurance policy. From the moment of key exchange to final delivery, your vehicle is insured for its full market valuation.</p>
                 </div>
-                <div>
-                    <h3 class="text-2xl font-semibold mb-4 serif italic underline decoration-slate-700 underline-offset-8">02. Biometric Access</h3>
-                    <p class="text-slate-400">Our Enclosed Stealth carriers feature digital locks with biometric verification. Only your assigned specialist can access the cargo bay.</p>
+                
+                <div class="group">
+                    <span class="text-xs font-mono text-slate-600 mb-2 block tracking-widest">PROTOCOL 02</span>
+                    <h3 class="text-3xl font-semibold mb-4 serif italic group-hover:text-white transition-colors">Biometric & Digital Chain</h3>
+                    <p class="text-slate-400 leading-relaxed">Our Stealth Series carriers feature biometric locks. Cargo bays remain sealed and can only be accessed by the assigned Logistics Specialist via encrypted authentication.</p>
                 </div>
-                <div>
-                    <h3 class="text-20 text-2xl font-semibold mb-4 serif italic underline decoration-slate-700 underline-offset-8">03. 24/7 Command Center</h3>
-                    <p class="text-slate-400">Your vehicle is never truly "alone." Our central command monitors route deviations, speed anomalies, and vibration alerts in real-time.</p>
+
+                <div class="group">
+                    <span class="text-xs font-mono text-slate-600 mb-2 block tracking-widest">PROTOCOL 03</span>
+                    <h3 class="text-3xl font-semibold mb-4 serif italic group-hover:text-white transition-colors">24/7 Kinetic Monitoring</h3>
+                    <p class="text-slate-400 leading-relaxed">Real-time telemetry monitors route deviations, speed anomalies, and vibration alerts. Our command center is notified of any impact greater than 0.5G.</p>
                 </div>
             </div>
 
-            <div class="relative">
-                <div class="absolute inset-0 bg-white/5 rounded-3xl blur-3xl"></div>
-                <img src="https://images.unsplash.com/photo-1557597774-9d2739f05a76?auto=format&fit=crop&q=80" class="relative rounded-3xl shield-glow border border-white/10" alt="Security Camera Monitoring">
+            <div class="relative p-4">
+                <div class="absolute inset-0 bg-blue-500/5 rounded-3xl blur-[100px]"></div>
+                <div class="relative rounded-3xl overflow-hidden border border-white/10 shield-glow">
+                    <img src="https://images.unsplash.com/photo-1557597774-9d2739f05a76?auto=format&fit=crop&q=80" class="w-full grayscale brightness-75 hover:grayscale-0 transition duration-1000" alt="Security Camera Monitoring">
+                    <div class="absolute top-4 right-4 flex items-center gap-2 bg-red-600 px-3 py-1 rounded text-[10px] font-bold tracking-tighter">
+                        <span class="w-2 h-2 rounded-full bg-white animate-ping"></span> LIVE FEED
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 border-y border-white/5">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center opacity-60">
-            <div class="space-y-2">
-                <div class="text-3xl font-bold">DOT</div>
-                <div class="text-xs uppercase tracking-widest">Certified</div>
+    <section class="py-20 bg-white/5 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+            <div>
+                <div class="text-2xl font-bold text-white mb-1 tracking-tighter uppercase">DOT</div>
+                <div class="text-[10px] uppercase tracking-[0.3em] text-slate-500 font-semibold">Certified Carrier</div>
             </div>
-            <div class="space-y-2">
-                <div class="text-3xl font-bold">FMCSA</div>
-                <div class="text-xs uppercase tracking-widest">Registered</div>
+            <div>
+                <div class="text-2xl font-bold text-white mb-1 tracking-tighter uppercase">FMCSA</div>
+                <div class="text-[10px] uppercase tracking-[0.3em] text-slate-500 font-semibold">Safety Registered</div>
             </div>
-            <div class="space-y-2">
-                <div class="text-3xl font-bold">ISO-9001</div>
-                <div class="text-xs uppercase tracking-widest">Compliance</div>
+            <div>
+                <div class="text-2xl font-bold text-white mb-1 tracking-tighter uppercase">AES-256</div>
+                <div class="text-[10px] uppercase tracking-[0.3em] text-slate-500 font-semibold">Data Encryption</div>
             </div>
-            <div class="space-y-2">
-                <div class="text-3xl font-bold">GPS</div>
-                <div class="text-xs uppercase tracking-widest">Encrypted</div>
+            <div>
+                <div class="text-2xl font-bold text-white mb-1 tracking-tighter uppercase">Full</div>
+                <div class="text-[10px] uppercase tracking-[0.3em] text-slate-500 font-semibold">Liability Cover</div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 text-center">
-        <h2 class="text-4xl serif italic mb-8">Peace of mind isn't optional.</h2>
-        <a href="booking.html" class="bg-white text-black px-12 py-4 font-bold uppercase tracking-widest hover:bg-slate-200 transition">
-            Secure Your Slot
+    <section class="py-32 text-center px-4">
+        <h2 class="text-4xl md:text-6xl serif italic mb-10">Safety is not a luxury. <br>It's our baseline.</h2>
+        <a href="booking.html" class="bg-white text-black px-12 py-5 font-black uppercase tracking-widest hover:bg-slate-200 transition-all rounded-full text-sm">
+            Reserve Secure Transport
         </a>
     </section>
 
-    <footer class="py-12 border-t border-slate-900 text-center text-slate-600 text-sm">
-        <p>&copy; 2026 Lightness Car Delivery. Safety first, always.</p>
+    <footer class="py-12 border-t border-white/5 text-center">
+        <p class="text-slate-600 text-[10px] uppercase tracking-[0.4em]">&copy; 2026 Lightness Operations • Global Security Standard</p>
     </footer>
 
 </body>

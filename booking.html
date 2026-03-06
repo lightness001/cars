@@ -3,61 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lightness | Book Transport</title>
+    <title>Lightness | Elite Car Selection</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-    <style>.serif { font-family: 'Playfair Display', serif; }</style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .serif { font-family: 'Playfair Display', serif; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .car-card:hover img { transform: scale(1.05); }
+    </style>
 </head>
-<body class="bg-slate-950 text-white">
+<body class="bg-slate-950 text-white antialiased">
 
-    <nav class="p-6 flex justify-between items-center border-b border-white/10">
-        <a href="index.html" class="text-xl font-bold serif italic">LIGHTNESS</a>
-        <a href="index.html" class="text-sm uppercase tracking-widest text-slate-400">← Back Home</a>
+    <nav class="p-6 flex justify-between items-center border-b border-white/10 sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md">
+        <a href="index.html" class="text-2xl font-bold serif italic tracking-tighter">LIGHTNESS</a>
+        <a href="index.html" class="text-xs uppercase tracking-[0.2em] text-slate-400 hover:text-white transition flex items-center gap-2">
+            <span>←</span> Back Home
+        </a>
     </nav>
 
-    <header class="py-16 text-center">
-        <h1 class="text-5xl serif italic mb-4">Select Your Vehicle</h1>
-        <p class="text-slate-400">Premium delivery rates for world-class machines.</p>
+    <header class="py-20 text-center px-4">
+        <h1 class="text-5xl md:text-7xl serif italic mb-6">Select Your Vehicle</h1>
+        <p class="text-slate-400 max-w-xl mx-auto text-lg font-light">
+            Premium delivery rates for world-class machines. All bookings include real-time tracking and enclosed protection.
+        </p>
     </header>
 
-    <section class="max-w-7xl mx-auto px-6 pb-24 grid grid-cols-1 md:grid-cols-3 gap-8">
-        
-        <div class="bg-slate-900 rounded-3xl overflow-hidden border border-white/5 hover:border-white/20 transition">
-            <img src="https://images.unsplash.com/photo-1555353540-64580b51c258?auto=format&fit=crop&q=80" class="w-full h-64 object-cover" alt="Porsche">
-            <div class="p-6">
-                <h3 class="text-2xl font-bold mb-2">Porsche 911 GT3</h3>
-                <p class="text-slate-500 mb-6 text-sm">Cross-country enclosed transport.</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-xl font-bold">$1,200</span>
-                    <a href="https://wa.me/YOUR_NUMBER?text=I%20want%20to%20book%20the%20Porsche" class="bg-white text-black px-4 py-2 rounded-lg text-sm font-bold">Book Now</a>
+    <section class="max-w-7xl mx-auto px-6 pb-32">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <div class="car-card group bg-slate-900/50 rounded-3xl overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-500">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1555353540-64580b51c258?auto=format&fit=crop&q=80" class="w-full h-full object-cover transition-transform duration-700" alt="Porsche">
+                    <div class="absolute top-4 left-4 bg-white/10 backdrop-blur-md px-3 py-1 rounded-full text-[10px] uppercase font-bold tracking-widest">Enclosed</div>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-2">Porsche 911 GT3</h3>
+                    <p class="text-slate-500 mb-8 text-sm leading-relaxed">Aerodynamic excellence meets precision logistics. Required for all low-clearance sports models.</p>
+                    <div class="flex justify-between items-center pt-4 border-t border-white/5">
+                        <div class="flex flex-col">
+                            <span class="text-xs text-slate-500 uppercase tracking-tighter">From</span>
+                            <span class="text-2xl font-bold">$1,200</span>
+                        </div>
+                        <a href="https://wa.me/255000000000?text=I%20want%20to%20book%20transport%20for%20the%20Porsche%20911%20GT3" class="bg-white text-black px-6 py-3 rounded-xl text-xs font-black uppercase tracking-widest hover:bg-slate-200 transition">Book Now</a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="bg-slate-900 rounded-3xl overflow-hidden border border-white/5 hover:border-white/20 transition">
-            <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&q=80" class="w-full h-64 object-cover" alt="Ferrari">
-            <div class="p-6">
-                <h3 class="text-2xl font-bold mb-2">Ferrari F8 Tributo</h3>
-                <p class="text-slate-500 mb-6 text-sm">VIP White-Glove service only.</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-xl font-bold">$2,500</span>
-                    <a href="https://wa.me/YOUR_NUMBER?text=I%20want%20to%20book%20the%20Ferrari" class="bg-white text-black px-4 py-2 rounded-lg text-sm font-bold">Book Now</a>
+            <div class="car-card group bg-slate-900/50 rounded-3xl overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-500">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&q=80" class="w-full h-full object-cover transition-transform duration-700" alt="Ferrari">
+                    <div class="absolute top-4 left-4 bg-red-600/20 backdrop-blur-md px-3 py-1 rounded-full text-[10px] uppercase font-bold tracking-widest text-red-400">Elite Tier</div>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-2">Ferrari F8 Tributo</h3>
+                    <p class="text-slate-500 mb-8 text-sm leading-relaxed">VIP white-glove service. Includes personal concierge and specialized loading protocols.</p>
+                    <div class="flex justify-between items-center pt-4 border-t border-white/5">
+                        <div class="flex flex-col">
+                            <span class="text-xs text-slate-500 uppercase tracking-tighter">From</span>
+                            <span class="text-2xl font-bold">$2,500</span>
+                        </div>
+                        <a href="https://wa.me/255000000000?text=I%20want%20to%20book%20transport%20for%20the%20Ferrari%20F8" class="bg-white text-black px-6 py-3 rounded-xl text-xs font-black uppercase tracking-widest hover:bg-slate-200 transition">Book Now</a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="bg-slate-900 rounded-3xl overflow-hidden border border-white/5 hover:border-white/20 transition">
-            <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&q=80" class="w-full h-64 object-cover" alt="Range Rover">
-            <div class="p-6">
-                <h3 class="text-2xl font-bold mb-2">Range Rover SV</h3>
-                <p class="text-slate-500 mb-6 text-sm">Heavy-duty luxury logistics.</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-xl font-bold">$950</span>
-                    <a href="https://wa.me/YOUR_NUMBER?text=I%20want%20to%20book%20the%20Range" class="bg-white text-black px-4 py-2 rounded-lg text-sm font-bold">Book Now</a>
+            <div class="car-card group bg-slate-900/50 rounded-3xl overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-500">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&q=80" class="w-full h-full object-cover transition-transform duration-700" alt="Range Rover">
+                    <div class="absolute top-4 left-4 bg-blue-600/20 backdrop-blur-md px-3 py-1 rounded-full text-[10px] uppercase font-bold tracking-widest text-blue-400">Standard SUV</div>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-2">Range Rover SV</h3>
+                    <p class="text-slate-500 mb-8 text-sm leading-relaxed">Heavy-duty luxury logistics for large luxury vehicles. Extra-wide ramp loading available.</p>
+                    <div class="flex justify-between items-center pt-4 border-t border-white/5">
+                        <div class="flex flex-col">
+                            <span class="text-xs text-slate-500 uppercase tracking-tighter">From</span>
+                            <span class="text-2xl font-bold">$950</span>
+                        </div>
+                        <a href="https://wa.me/255000000000?text=I%20want%20to%20book%20transport%20for%20the%20Range%20Rover%20SV" class="bg-white text-black px-6 py-3 rounded-xl text-xs font-black uppercase tracking-widest hover:bg-slate-200 transition">Book Now</a>
+                    </div>
                 </div>
             </div>
+
         </div>
 
+        <div class="mt-20 glass p-12 rounded-[3rem] text-center max-w-3xl mx-auto">
+            <h4 class="text-2xl serif italic mb-4">Don't see your specific model?</h4>
+            <p class="text-slate-400 mb-8 text-sm">We transport everything from custom motorcycles to private helicopters.</p>
+            <a href="mailto:quotes@lightness.com" class="inline-block border-b border-white pb-2 text-xs uppercase tracking-widest font-bold hover:text-slate-400 transition">Request Custom Quote</a>
+        </div>
     </section>
+
+    <footer class="py-12 border-t border-white/5 text-center text-slate-600 text-xs tracking-widest uppercase">
+        <p>&copy; 2026 Lightness Logistics Group</p>
+    </footer>
+
 </body>
 </html>

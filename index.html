@@ -17,18 +17,19 @@
 <body class="bg-slate-950 text-slate-100 antialiased">
 
     <nav class="fixed w-full z-50 glass px-6 py-4 flex justify-between items-center">
-        <div class="text-2xl font-bold tracking-tighter serif italic text-white">LIGHTNESS</div>
+        <div class="text-2xl font-bold tracking-tighter serif italic text-white">
+            <a href="index.html">LIGHTNESS</a>
+        </div>
+        
         <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest text-slate-400 font-medium">
-    <a href="fleet.html" class="hover:text-white transition">Fleet</a>
-    <a href="security.html" class="hover:text-white transition">Security</a>
-    <a href="tracking.html" class="hover:text-white transition">Tracking</a>
-</div>
-<a href="booking.html" class="bg-white text-black px-6 py-2 text-xs font-bold uppercase tracking-widest hover:bg-slate-200 transition">
-    Book Transport
-</a>
-        <button class="bg-white text-black px-6 py-2 text-xs font-bold uppercase tracking-widest hover:bg-slate-200 transition">
+            <a href="fleet.html" class="hover:text-white transition">Fleet</a>
+            <a href="security.html" class="hover:text-white transition">Security</a>
+            <a href="tracking.html" class="hover:text-white transition">Tracking</a>
+        </div>
+
+        <a href="booking.html" class="bg-white text-black px-6 py-2 text-xs font-bold uppercase tracking-widest hover:bg-slate-200 transition">
             Book Transport
-        </button>
+        </a>
     </nav>
 
     <section class="relative h-screen flex items-center justify-center overflow-hidden">
@@ -43,13 +44,14 @@
             <p id="sub-text" class="max-w-xl mx-auto text-slate-400 text-lg mb-10 font-light tracking-wide">
                 Experience the lightness of professional car delivery. From supercars to vintage classics, we handle every mile with surgical precision.
             </p>
+            
             <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a id="whatsapp-btn" href="https://wa.me/YOUR_NUMBER" class="bg-white text-black px-10 py-4 rounded-full font-bold hover:scale-105 transition duration-300 inline-block text-center">
+                <a id="whatsapp-btn" href="booking.html" class="bg-white text-black px-10 py-4 rounded-full font-bold hover:scale-105 transition duration-300 inline-block text-center">
                     Get a Quote
                 </a>
-                <button class="border border-slate-700 px-10 py-4 rounded-full font-bold hover:bg-slate-900 transition duration-300">
+                <a href="fleet.html" class="border border-slate-700 px-10 py-4 rounded-full font-bold hover:bg-slate-900 transition duration-300 inline-block text-center">
                     View Fleet
-                </button>
+                </a>
             </div>
         </div>
     </section>
@@ -77,8 +79,8 @@
     <section class="py-20 text-center bg-white text-black">
         <h2 class="text-3xl md:text-5xl serif italic mb-8">Ready for the Lightness experience?</h2>
         <p class="mb-10 text-slate-600 font-medium">Join 5,000+ luxury car owners who trust us annually.</p>
-        <a href="mailto:contact@lightness.com" class="inline-block border-2 border-black px-12 py-4 font-black uppercase tracking-widest hover:bg-black hover:text-white transition duration-500">
-            Contact Specialist
+        <a href="booking.html" class="inline-block border-2 border-black px-12 py-4 font-black uppercase tracking-widest hover:bg-black hover:text-white transition duration-500">
+            Start Booking
         </a>
     </section>
 
@@ -87,12 +89,10 @@
     </footer>
 
     <script>
-        // 1. Check the URL for parameters like ?name=John&car=Tesla
         const params = new URLSearchParams(window.location.search);
         const name = params.get('name');
         const car = params.get('car');
 
-        // 2. If name or car exists in the link, update the page text
         if (name) {
             document.getElementById('welcome-text').innerText = `Welcome, ${name}`;
         }
@@ -101,10 +101,10 @@
             document.getElementById('car-text').innerText = `${car} Delivery.`;
             document.getElementById('sub-text').innerText = `Your ${car} deserves elite transport. We are ready to move when you are.`;
             
-            // 3. Update the WhatsApp button with a custom message
             const waBtn = document.getElementById('whatsapp-btn');
+            // If car is in URL, we turn the button into a WhatsApp link for that car
             const customMessage = encodeURIComponent(`Hello Lightness! I am ${name || 'interested'} and I want a quote for delivering my ${car}.`);
-            waBtn.href = `https://wa.me/255000000000?text=${customMessage}`; // Replace with your real number
+            waBtn.href = `https://wa.me/255000000000?text=${customMessage}`; 
             waBtn.innerText = `Quote for ${car}`;
         }
     </script>
